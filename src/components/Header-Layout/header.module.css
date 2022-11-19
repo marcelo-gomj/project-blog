@@ -1,0 +1,39 @@
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2rem;
+
+   color: black;
+   background: white;
+   padding: 0.2rem 1rem ;
+   text-align: center;
+}
+
+.logo-blog{
+   font-size: 1.7rem;
+   font-weight: 700;
+}
+
+.container ul{
+   display: flex;
+   font-size: 1.125rem;
+}
+
+.menu li{
+   padding: 0.3rem 1.5rem;
+   border-radius: 3px;
+   border: 2px solid transparent;
+}
+
+.menu li:hover{
+   border-color: black;
+   transition: border-color 300ms ease;
+}
+
+/* .search-button svg{
+   width: 1.8rem;
+   height: 1.8rem;
+   stroke-width: 0.5;
+   fill: rgba(0, 0, 0, 0.267) !important;
+} */
