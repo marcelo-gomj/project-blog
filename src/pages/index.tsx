@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Header } from '../components/Header-Layout';
+import { GetServerSideProps } from 'next';
 import styles from '../styles/Home.module.css';
+import { BannerHome } from '../components/BannerHome';
 
 export default function Home() {
   return (
@@ -12,13 +12,21 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <main className={styles.main} style={{"height": '1000px'}}>
+        
+        <BannerHome />
 
       </main>
-
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
+}
+
+export function getServerSideProps({}: GetServerSideProps){
+  
+
+  return {
+    props : {
+
+    }
+  }
 }

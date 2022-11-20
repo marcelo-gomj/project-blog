@@ -1,39 +1,131 @@
 .container {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 2rem;
-
+   position: fixed;
    color: black;
+   width: 100%;
    background: white;
-   padding: 0.2rem 1rem ;
-   text-align: center;
+}
+
+.top-header{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   padding: 0.4rem 2rem;
+   /* margin: 0.5rem 0 ; */
+   /* border-bottom: 3px solid rgba(0, 0, 0, 0.1); */
+   /* box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.1); */
+}
+
+.search-main{
+   width: 50%;
+}
+
+.search-main input{
+   display: none;
+   border: 2px solid black;
+   width: 100%;
+   height: 100%;
 }
 
 .logo-blog{
    font-size: 1.7rem;
+   color: rgba(0, 0, 0, 0.8);
    font-weight: 700;
 }
 
-.container ul{
+.menu{
    display: flex;
-   font-size: 1.125rem;
+   justify-content: center;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+
+   /* border: 2px solid black; */
+   /* padding: .3rem; */
+   border-radius: 4px;
+   /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); */
+   font-size: 1.15rem;
 }
 
 .menu li{
-   padding: 0.3rem 1.5rem;
-   border-radius: 3px;
-   border: 2px solid transparent;
+   color: rgb(80, 80, 80);
+   padding: 0.6rem 2rem;
+   border-bottom: 2px solid transparent;
 }
 
 .menu li:hover{
    border-color: black;
-   transition: border-color 300ms ease;
+   color: black;
+   transition: border-color 600ms ease;
 }
 
-/* .search-button svg{
+.active-menu{
+   border-color: black !important;
+}
+
+.controllers{
+   display: flex;
+   align-items: center;
+}
+
+.login-button, .search-button{
+   border: 2px solid transparent;
+
+   font-size: 1.2rem;
+   padding: 0.3rem 1.5rem;
+   border-radius: 4px;
+   /* outline: 1px solid transparent; */
+   margin: 0 0.5rem;
+}
+
+.login-button:hover, .search-button:hover{
+   /* outline-color: black ; */
+   border-color: rgba(0, 0, 0, 0.5);
+   /* background-color: rgba(0, 0, 0, 0.2); */
+   /* outline: 2px solid black; */
+   transition: border-color 500ms ease;
+   cursor: pointer;
+}
+
+/* .search-button{
+   padding: 0 3rem;
+}
+
+.search-button svg{
    width: 1.8rem;
    height: 1.8rem;
-   stroke-width: 0.5;
-   fill: rgba(0, 0, 0, 0.267) !important;
+   stroke-width: 0;
+   fill: rgba(0, 0, 0) ;
+   stroke: rgba(0, 0, 0) ;
+}
+
+.search-button svg:hover{
+   cursor: pointer;
 } */
+
+@media (prefers-color-scheme: light) {
+   .container {
+      background: black;
+      color: white;
+   }
+
+   .logo-blog{
+      color: white;
+   }
+
+   .menu li{
+      color: rgba(255, 255, 255, 0.4);
+   }
+
+   .menu li:hover{
+      color: white;
+      border-color: white;
+   }
+
+   .search-button svg{
+      fill: white ;
+      stroke: white ;
+   }
+
+   .menu{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+   }
+
+}
